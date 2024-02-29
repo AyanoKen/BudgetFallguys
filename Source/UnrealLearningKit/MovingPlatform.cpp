@@ -16,12 +16,26 @@ void AMovingPlatform::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	StartPosition = GetActorLocation();
+	CurrentPosition = StartPosition;
 }
 
 // Called every frame
 void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	CurrentPosition.X += MovementSpeed;
+
+	if(CurrentPosition.X > StartPosition.X + MovementRange){
+		MovementSpeed = MovementSpeed * (-1);
+	}
+
+	if(CurrentPosition.X < StartPosition.X){
+		MovementSpeed = MovementSpeed * (-1);
+	}
+
+	SetActorLocation(CurrentPosition);
 
 }
 

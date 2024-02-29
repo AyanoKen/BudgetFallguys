@@ -24,6 +24,15 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
-	int32 MyInt = 20;
+	FVector MyVector = FVector(0, 0, 0);
+
+	FVector StartPosition;
+	FVector CurrentPosition;
+
+	UPROPERTY(EditAnywhere)
+	float MovementRange = 1000.0;
+
+	UPROPERTY(EditAnywhere)
+	int32 MovementSpeed = 1;
 
 };
