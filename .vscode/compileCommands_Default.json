@@ -1,0 +1,42 @@
+[
+	{
+		"file": "D:\\Important\\GameDev\\BudgetFallguys\\Source\\UnrealLearningKit\\MovingPlatform.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\Important\\GameDev\\BudgetFallguys\\.vscode\\compileCommands_Default\\UnrealLearningKit.1.rsp"
+		],
+		"directory": "D:\\Entertainment\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\Important\\GameDev\\BudgetFallguys\\Source\\UnrealLearningKit\\MovingPlatform.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\Important\\GameDev\\BudgetFallguys\\.vscode\\compileCommands_Default\\UnrealLearningKit.1.rsp"
+		],
+		"directory": "D:\\Entertainment\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\Important\\GameDev\\BudgetFallguys\\Source\\UnrealLearningKit\\UnrealLearningKit.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\Important\\GameDev\\BudgetFallguys\\.vscode\\compileCommands_Default\\UnrealLearningKit.1.rsp"
+		],
+		"directory": "D:\\Entertainment\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\Important\\GameDev\\BudgetFallguys\\Source\\UnrealLearningKit\\UnrealLearningKit.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\Important\\GameDev\\BudgetFallguys\\.vscode\\compileCommands_Default\\UnrealLearningKit.1.rsp"
+		],
+		"directory": "D:\\Entertainment\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "D:\\Important\\GameDev\\BudgetFallguys\\Source\\UnrealLearningKit\\UnrealLearningKit.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\bin\\Hostx64\\x64\\cl.exe",
+			"@D:\\Important\\GameDev\\BudgetFallguys\\.vscode\\compileCommands_Default\\UnrealLearningKit.1.rsp"
+		],
+		"directory": "D:\\Entertainment\\UE_5.3\\Engine\\Source"
+	}
+]
