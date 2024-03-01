@@ -17,7 +17,21 @@ void AMovingPlatform::BeginPlay()
 	Super::BeginPlay();
 	
 	StartPosition = GetActorLocation();
-	CurrentPosition = StartPosition;
+
+	switch (MovementDirection)
+	{
+	case 1:
+		PlatformVelocity = FVector(0, MovementSpeed, 0);
+		break;
+
+	case 2:
+		PlatformVelocity = FVector(0, 0, MovementSpeed);
+		break;
+	
+	default:
+		PlatformVelocity = FVector(MovementSpeed, 0, 0);
+		break;
+	}
 }
 
 // Called every frame
@@ -25,17 +39,26 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	CurrentPosition.X += MovementSpeed;
+	FVector CurrentPosition = GetActorLocation();
 
-	if(CurrentPosition.X > StartPosition.X + MovementRange){
-		MovementSpeed = MovementSpeed * (-1);
-	}
-
-	if(CurrentPosition.X < StartPosition.X){
-		MovementSpeed = MovementSpeed * (-1);
-	}
-
+	CurrentPosition = CurrentPosition + PlatformVelocity * DeltaTime;
 	SetActorLocation(CurrentPosition);
 
+	float DistMoved = FVector::Dist(StartPosition, CurrentPosition);
+
+	// if(CurrentPosition.X > StartPosition.X + MovementRange){
+	// 	MovementSpeed = MovementSpeed * (-1);
+	// }
+
+	// if(CurrentPosition.X < StartPosition.X){
+	// 	MovementSpeed = MovementSpeed * (-1);
+	// }
+
+	if(DistMoved > MovementRange){
+		FVector CurrentDirection = PlatformVelocity.GetSafeNormal();
+		StartPosition = StartPosition + CurrentDirection * MovementRange;
+		SetActorLocation(StartPosition);
+		PlatformVelocity = -PlatformVelocity;
+	}
 }
 

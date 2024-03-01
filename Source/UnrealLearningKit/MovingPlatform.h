@@ -27,12 +27,16 @@ public:
 	FVector MyVector = FVector(0, 0, 0);
 
 	FVector StartPosition;
-	FVector CurrentPosition;
 
 	UPROPERTY(EditAnywhere)
 	float MovementRange = 1000.0;
 
 	UPROPERTY(EditAnywhere)
 	int32 MovementSpeed = 1;
+
+	UPROPERTY(EditAnywhere)
+	int32 MovementDirection = 0;
+
+	FVector PlatformVelocity = FVector(MovementSpeed, 0, 0);
 
 };
