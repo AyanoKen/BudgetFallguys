@@ -4,16 +4,16 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "MovingPlatform.generated.h"
+#include "RotatingPlatform.generated.h"
 
 UCLASS()
-class UNREALLEARNINGKIT_API AMovingPlatform : public AActor
+class UNREALLEARNINGKIT_API ARotatingPlatform : public AActor
 {
 	GENERATED_BODY()
 	
 public:	
 	// Sets default values for this actor's properties
-	AMovingPlatform();
+	ARotatingPlatform();
 
 protected:
 	// Called when the game starts or when spawned
@@ -25,19 +25,9 @@ public:
 
 private:
 
-	FVector StartPosition;
-
 	UPROPERTY(EditAnywhere)
-	float MovementRange = 1000.0;
+	int32 RotateSpeed = 10;
 
-	UPROPERTY(EditAnywhere)
-	int32 MovementSpeed = 1;
-
-	UPROPERTY(EditAnywhere)
-	int32 MovementDirection = 0;
-
-	FVector PlatformVelocity = FVector(MovementSpeed, 0, 0);
-
-	void MovePlatform(float DeltaTime);
+	void RotatePlatform(float DeltaTime);
 
 };

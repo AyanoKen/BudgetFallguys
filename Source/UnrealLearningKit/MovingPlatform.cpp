@@ -39,20 +39,17 @@ void AMovingPlatform::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	MovePlatform(DeltaTime);
+}
+
+void AMovingPlatform::MovePlatform(float DeltaTime)
+{
 	FVector CurrentPosition = GetActorLocation();
 
 	CurrentPosition = CurrentPosition + PlatformVelocity * DeltaTime;
 	SetActorLocation(CurrentPosition);
 
 	float DistMoved = FVector::Dist(StartPosition, CurrentPosition);
-
-	// if(CurrentPosition.X > StartPosition.X + MovementRange){
-	// 	MovementSpeed = MovementSpeed * (-1);
-	// }
-
-	// if(CurrentPosition.X < StartPosition.X){
-	// 	MovementSpeed = MovementSpeed * (-1);
-	// }
 
 	if(DistMoved > MovementRange){
 		FVector CurrentDirection = PlatformVelocity.GetSafeNormal();
