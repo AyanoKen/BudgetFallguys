@@ -28,6 +28,6 @@ void ARotatingPlatform::Tick(float DeltaTime)
 }
 
 void ARotatingPlatform::RotatePlatform(float DeltaTime){
-	
+	AddActorLocalRotation(RotateSpeed * DeltaTime);
 }
 

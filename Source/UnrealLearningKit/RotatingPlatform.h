@@ -26,7 +26,7 @@ public:
 private:
 
 	UPROPERTY(EditAnywhere)
-	int32 RotateSpeed = 10;
+	FRotator RotateSpeed = FRotator(0, 10, 0);
 
 	void RotatePlatform(float DeltaTime);
 
